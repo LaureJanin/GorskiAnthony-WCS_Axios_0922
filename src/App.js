@@ -1,25 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Fragment } from "react";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <Fragment>
+      <header>
+        <h1>Comment on utilise une API avec React</h1>
       </header>
-    </div>
+      <main>
+        <section className="explain">
+          <p>Nous allons voir le fonctionnement d'une API avec react</p>
+          <p>
+            Comment ? En utilisant
+            <a href="https://www.npmjs.com/package/axios" target="_blank">
+              <code>axios</code>
+            </a>
+          </p>
+        </section>
+        <section className="container">
+          <h1>Une blague de développeur ?</h1>
+          <div>
+            <div className="render">
+              <span className="quote">
+                My aunt told me to fix her computer, so I got late today.
+              </span>
+            </div>
+            <button>Une autre blague</button>
+          </div>
+        </section>
+      </main>
+    </Fragment>
   );
-}
+};
 
 export default App;
